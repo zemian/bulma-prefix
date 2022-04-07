@@ -4,9 +4,9 @@
   "description": "Build custom BulmaCSS file with prefix name to all classes.",
   "main": "sass/my-bulma.scss",
   "scripts": {
-    "css-build-dev": "sass --no-source-map sass/my-bulma.scss build/my-bulma.css && postcss --output css/bu-bulma.css build/my-bulma.css",
-    "css-build-min": "postcss --use postcss-minify --map --output css/bu-bulma.min.css css/bu-bulma.css",
-    "css-build": "npm run css-build-dev && npm run css-build-min && cp -rfv css/* ../wordpress/wp-content/plugins/unicop-services/admin/css",
+    "css-build-dev": "sass --no-source-map sass/my-bulma.scss build/my-bulma.css && postcss --output build/bu-bulma.css build/my-bulma.css",
+    "css-build-min": "postcss --use postcss-minify --map --output build/bu-bulma.min.css build/bu-bulma.css",
+    "css-build": "npm run css-build-dev && npm run css-build-min",
     "css-watch": "npm run css-build-dev -- --watch"
   },
   "keywords": ["bulma", "css"],

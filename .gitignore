@@ -1,6 +1,4 @@
 node_modules/
 .idea/
-/build/
 
-# Ignore build result since we are copying them into WordPress directory already
-/css/
+/build/my-bulma.css
