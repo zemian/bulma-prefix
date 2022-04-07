@@ -1,0 +1,22 @@
+{
+  "name": "bu-bulma-css",
+  "version": "1.0.0",
+  "description": "Build custom BulmaCSS file with prefix name to all classes.",
+  "main": "sass/my-bulma.scss",
+  "scripts": {
+    "css-build-dev": "sass --no-source-map sass/my-bulma.scss build/my-bulma.css && postcss --output css/bu-bulma.css build/my-bulma.css",
+    "css-build-min": "postcss --use postcss-minify --map --output css/bu-bulma.min.css css/bu-bulma.css",
+    "css-build": "npm run css-build-dev && npm run css-build-min && cp -rfv css/* ../wordpress/wp-content/plugins/unicop-services/admin/css",
+    "css-watch": "npm run css-build-dev -- --watch"
+  },
+  "keywords": ["bulma", "css"],
+  "author": "Zemian Deng <zemiandeng@gmail.com>",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.1.0",
+    "postcss-minify": "^1.1.0",
+    "postcss-prefixer": "^2.1.3",
+    "sass": "^1.45.0"
+  }
+}
