@@ -22,6 +22,10 @@ Project output folders:
 
 * build - this is where Sass tool will output the css file from `.sass` source files.
 
+## Examples
+
+After build, you may test out the css output by running `hello.html`.
+
 ## NOTES
 
 We do not use `sass` to minify output in this project, but instead use `postcss` to minify the resulted
